@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Food Traceability</title>
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+    <h1>Welcome to Food Traceability</h1>
+    <button id="start">Start Logging Produce</button>
+  </div>
+
+  <script>
+    // Initialize Telegram Web App
+    const telegram = window.Telegram.WebApp;
+    telegram.ready();
+    
+    document.getElementById('start').addEventListener('click', () => {
+      telegram.MainButton.text = "Submit Data";
+      telegram.MainButton.show();
+    });
+  </script>
+</body>
+</html>
